@@ -5,8 +5,65 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SQL_APP_001"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="SQL APP 001" 
+        Height="450" 
+        Width="800"
+        MinHeight="360" 
+        MinWidth="600"
+        MaxHeight="800" 
+        MaxWidth="1024" 
+        >
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="24"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="24"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="16"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="16"/>
+        </Grid.RowDefinitions>
+        <Label 
+            x:Name="SearchLabel"
+            Content="Search" 
+            Grid.Column="1" 
+            Grid.Row="1"
+            Margin="8" 
+            FontSize="24"
+            />
+        <TextBox 
+            x:Name="SearchTextbox"
+            Grid.Column="2" 
+            Grid.Row="1" 
+            MinHeight="32"
+            Margin="8" 
+            TextWrapping="Wrap" 
+            Text="" 
+            FontSize="24"
+            />
+        <Button 
+            x:Name="FillButton"
+            Content="Fill List" 
+            FontSize="24"
+            Grid.Column="1" 
+            Grid.Row="2"
+            Margin="8"
+            Click="FillButton_Click" 
+            />
+        <ListBox 
+            x:Name="VehicleListbox"
+            Grid.Column="2" 
+            Grid.Row="2"
+            Grid.RowSpan="3" 
+            Background="LightGray"
+            Margin="8"
+            Padding="8"
+            />
     </Grid>
 </Window>

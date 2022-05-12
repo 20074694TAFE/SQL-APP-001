@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using MySql.Data.MySqlClient;
+﻿using MySql.Data.MySqlClient;
 
 namespace SQL_APP_001
 {
@@ -16,7 +11,7 @@ namespace SQL_APP_001
         private string dbServer;
 
         //private string dbConnectionString = "";
-        private MySqlConnection conn;
+        public MySqlConnection conn;
 
 
         public DB()
