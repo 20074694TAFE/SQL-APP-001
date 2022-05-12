@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Windows;
+using System.ComponentModel;
 
 namespace SQL_APP_001
 {
@@ -10,6 +11,8 @@ namespace SQL_APP_001
     public partial class MainWindow : Window
     {
         DB database = new DB();
+        BindingList<Vehicle> vehicles = new BindingList<Vehicle>();
+
         public MainWindow()
         {
             InitializeComponent();
@@ -38,6 +41,19 @@ namespace SQL_APP_001
 
             database.conn.Close();
 
+        }
+
+        private void PerformQuery(string sqlToRun, params object[] list)
+        {
+            database.conn.Open();
+            MySqlCommand command = new MySqlCommand(sqlToRun,database.conn);
+            if (list.Length > 0)
+            {
+                for(int i = 0; i < list.Length; i += 2)
+                {
+                    //command.Parameters.AddWithValue()
+                }
+            }
         }
     }
 }

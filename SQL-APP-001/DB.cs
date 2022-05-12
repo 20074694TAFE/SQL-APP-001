@@ -11,7 +11,7 @@ namespace SQL_APP_001
         private string dbServer;
 
         //private string dbConnectionString = "";
-        public MySqlConnection conn;
+        internal MySqlConnection conn;
 
 
         public DB()
@@ -25,5 +25,15 @@ namespace SQL_APP_001
             string dbConnectionString = $"server={dbServer}; user={dbUser}; database={dbName}; port={dbPort}; password={dbPassword}";
             conn = new MySqlConnection(dbConnectionString);
         }
+
+        //public void OpenConnection()
+        //{
+        //    conn.Open();
+        //}
+
+        //public void CloseConnection()
+        //{
+        //    conn.Close();
+        //}
     }
 }
