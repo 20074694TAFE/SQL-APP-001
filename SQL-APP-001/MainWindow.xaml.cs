@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using MySql.Data.MySqlClient;
 
 namespace SQL_APP_001
 {
@@ -20,6 +21,7 @@ namespace SQL_APP_001
     /// </summary>
     public partial class MainWindow : Window
     {
+        DB database = new DB();
         public MainWindow()
         {
             InitializeComponent();
